@@ -1,0 +1,39 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style-position: inside;
+}
+
+/* targeting each li element inside ul */
+
+ul > li {
+  border: 1px solid black;
+  padding: 10px 20px;
+}
+
+li:hover {
+  border: 1px solid red;
+}
+
+li:active {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+li:focus {
+  background-color: green;
+}
+
+li:nth-child(odd) {
+  color: grey;
+}
+
+li::before {
+  content: ">>";
+}
+
+@media screen and (max-width: 700px) {
+  ul {
+    flex-direction: column;
+  }
+}
